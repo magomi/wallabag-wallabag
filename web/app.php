@@ -9,6 +9,9 @@ $kernel = new AppKernel('prod', false);
 
 // When using the HttpCache, you need to call the method in your front controller instead of relying on the configuration parameter
 //Request::enableHttpMethodParameterOverride();
+if ($trustedProxies = $_SERVER['TRUSTED_PROXIES'] ?? false) {
+    Request::setTrustedProxies(explode(',', $trustedProxies));
+}
 $request = Request::createFromGlobals();
 $response = $kernel->handle($request);
 $response->send();
