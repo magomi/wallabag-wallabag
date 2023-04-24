@@ -33,7 +33,7 @@ framework:
     fragments: ~
     http_method_override: true
     assets: ~
-    trusted_proxies: "trusted_proxies"
+    trusted_proxies: "%trusted_proxies%"
 
 # Twig Configuration
 twig:

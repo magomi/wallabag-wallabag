@@ -26,6 +26,8 @@ parameters:
     domain_name: https://your-wallabag-url-instance.com
     server_name: "Your wallabag instance"
 
+    trusted_proxies: 127.0.0.1/32
+
     mailer_transport:  smtp
     mailer_user:       ~
     mailer_password:   ~
